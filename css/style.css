@@ -405,7 +405,8 @@ body {
 .blok1 {
   margin-right: 120px;
 }
-.social .blok2 {
+.social-blok2 {
+  display: flex;
   gap: 16px;
 }
 
@@ -442,7 +443,7 @@ body {
   background-color: #404bbf;
 }
 .social-link:focus {
-  background-color: #31d0aa;
+  background-color: #404bbf;
 }
 
 .social-icon {
