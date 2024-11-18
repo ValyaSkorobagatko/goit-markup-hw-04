@@ -33,10 +33,10 @@ body {
 
 .container {
   width: 1158px;
- /* padding: 0 15px;*/
+  padding: 0 15px;
   margin-right: auto;
   margin-left: auto;
-  }
+}
 
 .page-header {
   border-bottom: 1px solid #e7e9fc;
@@ -56,11 +56,11 @@ body {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-right: 76px;
   color: #404bbf;
 }
 .header-logo .logo-part {
   color: #2e2f42;
+  margin-right: 76px;
 }
 
 .header-nav {
@@ -73,7 +73,6 @@ body {
 .nav-list {
   display: flex;
   gap: 40px;
-  margin-right: 76px;
   transition: 250ms, ease-in;
   transition-property: color;
 }
@@ -89,25 +88,31 @@ body {
 }
 
 .nav-item {
+}
+.nav-link {
+  position: relative;
+  color: #404bbf;
+  padding: 24px 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
-  padding: 24px 0;
   display: block;
-
-  transition: 250ms, ease-in;
-  transition-property: color;
-
-  position: relative;
 }
-.nav-link {
+
+.nav-link-studio {
   position: relative;
+  padding: 24px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  display: block;
   color: #404bbf;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.nav-link::after {
+.nav-link-studio::after {
   content: "";
   height: 4px;
   border-radius: 2px;
@@ -119,7 +124,7 @@ body {
   background-color: #404bbf;
 }
 
-.nav-link:hover::after {
+.nav-link-studio:hover::after {
   background-color: #404bbf;
 }
 
@@ -175,7 +180,7 @@ body {
   max-width: 496px;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 48px;
+  margin-bottom: 48px;
 }
 .hero-btn {
   background: #4d5ae5;
@@ -220,7 +225,6 @@ body {
   align-items: center;
   width: 264px;
   height: 112px;
-  padding: 24px 100px;
   background: #f4f4fd;
   border: 1px solid #8e8f99;
   border-radius: 4px;
@@ -253,8 +257,6 @@ body {
 }
 .item-sub {
   padding: 32px 0;
- /* padding-left: 16px;
-  padding-right: 16px;*/
 }
 
 .team-title {
@@ -268,16 +270,11 @@ body {
   margin-bottom: 72px;
 }
 
-/*.team-icon {
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 32px;
-}*/
-
 .team-list {
   display: flex;
   gap: 24px;
 }
+
 .team-item {
   background-color: #ffffff;
   width: calc((100% - 3 * 24px) / 4);
@@ -285,8 +282,10 @@ body {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
 .team-img {
 }
+
 .team-subtitle {
   font-size: 20px;
   line-height: 1.2;
@@ -311,11 +310,9 @@ body {
 }
 
 .portfolio-container {
-  margin-bottom: 8px;
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
-  margin-bottom: 8px;
 }
 
 .portfolio-title {
@@ -337,14 +334,17 @@ body {
 
 .portfolio-item {
   width: calc((100% - 48px) / 3);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   background: #fff;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.portfolio-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .portfolio-item:hover .overlay {
   transform: translateY(0);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-wrapper {
@@ -389,7 +389,6 @@ body {
   font-size: 16px;
   letter-spacing: 0.02em;
   line-height: 1.5;
-  margin-bottom: 32px;
 }
 
 .footer {
@@ -404,6 +403,7 @@ body {
 }
 .blok1 {
   margin-right: 120px;
+  width: 264px;
 }
 .social-bloks {
   display: flex;
@@ -414,17 +414,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  margin-top: 16px;
+  margin-top: 8px;
   justify-content: center;
 }
 
 .social-item {
-  display: flex;
-  flex-wrap: nowrap
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: #4d5ae5;
   width: 40px;
   height: 40px;
 }
@@ -473,6 +467,14 @@ body {
 .footer-text {
   letter-spacing: 0.02em;
   line-height: 1.5;
+  width: 100%;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.footer-text-social {
+  letter-spacing: 0.02em;
+  line-height: 1.5;
   width: 264px;
   font-weight: 500;
   color: #ffffff;
@@ -482,7 +484,3 @@ body {
 .footer-logo .logo-part {
   color: #f4f4fd;
 }
-
-/*.social-footer-social {
-  gap: 16px;
-}*/
